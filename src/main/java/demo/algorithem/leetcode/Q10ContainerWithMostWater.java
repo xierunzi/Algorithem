@@ -1,6 +1,12 @@
-package demo.algorithem;
+package demo.algorithem.leetcode;
 
 /**
+ * 盛水最多的容器
+ * 双指针
+ * <p>
+ * 因为容器的体积为 两指针的距离*两指针中较小的那个指针的高度
+ * 所以双指针从两头开始向中间遍历，固定其中一个变量距离，然后选取较小的指针向中间移动一位
+ *
  * @author xierz
  * @date 2021/11/28
  */

@@ -1,6 +1,8 @@
-package demo.algorithem;
+package demo.algorithem.leetcode;
 
 /**
+ * 双指针基础题
+ *
  * @author xierz
  * @date 2021/11/23
  */

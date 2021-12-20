@@ -1,6 +1,9 @@
-package demo.algorithem;
+package demo.algorithem.leetcode;
 
 /**
+ * 暴力解
+ * 题目意义不大
+ *
  * @author xierz
  * @date 2021/11/28
  */

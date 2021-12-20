@@ -1,4 +1,4 @@
-package demo.algorithem;
+package demo.algorithem.leetcode;
 
 /**
  * @author xierz
