@@ -1,4 +1,4 @@
-package demo.algorithem.leetcode;
+package demo.algorithem.leetcode.practice;
 
 /**
  * 最长公共前缀

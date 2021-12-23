@@ -1,6 +1,10 @@
-package demo.algorithem.leetcode;
+package demo.algorithem.leetcode.practice;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * 三数之和

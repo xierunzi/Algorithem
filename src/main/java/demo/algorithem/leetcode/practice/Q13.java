@@ -1,4 +1,4 @@
-package demo.algorithem.leetcode;
+package demo.algorithem.leetcode.practice;
 
 import java.util.HashMap;
 import java.util.Map;

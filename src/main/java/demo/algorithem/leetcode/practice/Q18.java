@@ -1,6 +1,11 @@
-package demo.algorithem.leetcode;
+package demo.algorithem.leetcode.practice;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * 类似Q15、Q16
