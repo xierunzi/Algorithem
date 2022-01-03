@@ -8,14 +8,19 @@ import java.util.Arrays;
  */
 public class Q34 {
 
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(new Q34().searchRange(new int[]{2, 2}, 2)));
     }
 
+    private final int[] resArray = new int[]{-1, -1};
+
     public int[] searchRange(int[] nums, int target) {
         int index = Arrays.binarySearch(nums, target);
         if (index < 0) {
-            return new int[]{-1, -1};
+            resArray[0] = -1;
+            resArray[1] = -1;
+            return resArray;
         }
         int leftRes = index;
         int rightRes = index;
@@ -33,9 +38,11 @@ public class Q34 {
                 right = true;
             }
             if (left && right) {
-                return new int[]{leftRes, rightRes};
+                break;
             }
         }
-        return new int[]{leftRes == -1 ? index : leftRes, rightRes == -1 ? index : rightRes};
+        resArray[0] = leftRes;
+        resArray[1] = rightRes;
+        return resArray;
     }
 }
