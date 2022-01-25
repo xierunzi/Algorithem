@@ -20,6 +20,9 @@ public class Q77 {
     }
 
     private void inner(List<List<Integer>> result, int current, int n, int k, LinkedList<Integer> temp) {
+        if (temp.size() + 1 + n - current < k) {
+            return;
+        }
         if (temp.size() == k) {
             result.add(new ArrayList<>(temp));
             return;
