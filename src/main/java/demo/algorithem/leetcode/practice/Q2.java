@@ -4,7 +4,7 @@ package demo.algorithem.leetcode.practice;
  * @author xierz
  * @date 2021/11/15
  */
-public class Q2AddTwoNumbers {
+public class Q2 {
     static class ListNode {
         int val;
         ListNode next;

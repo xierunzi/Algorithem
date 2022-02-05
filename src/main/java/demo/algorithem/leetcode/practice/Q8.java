@@ -6,9 +6,9 @@ import java.util.LinkedList;
  * @author xierz
  * @date 2021/11/18
  */
-public class Q8StringToInteger {
+public class Q8 {
     public static void main(String[] args) {
-        System.out.println(new Q8StringToInteger().myAtoi("10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000522545459"));
+        System.out.println(new Q8().myAtoi("10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000522545459"));
     }
 
     public int myAtoi(String s) {

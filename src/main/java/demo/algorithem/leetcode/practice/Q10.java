@@ -10,11 +10,11 @@ package demo.algorithem.leetcode.practice;
  * @author xierz
  * @date 2021/11/28
  */
-public class Q10ContainerWithMostWater {
+public class Q10 {
 
     public static void main(String[] args) {
         int[] param = new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7};
-        System.out.println(new Q10ContainerWithMostWater().maxArea(param));
+        System.out.println(new Q10().maxArea(param));
     }
 
     public int maxArea(int[] height) {

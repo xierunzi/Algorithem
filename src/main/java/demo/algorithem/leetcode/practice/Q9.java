@@ -6,9 +6,9 @@ package demo.algorithem.leetcode.practice;
  * @author xierz
  * @date 2021/11/23
  */
-public class Q9PalindromeNumber {
+public class Q9 {
     public static void main(String[] args) {
-        System.out.println(new Q9PalindromeNumber().isPalindrome(101101));
+        System.out.println(new Q9().isPalindrome(101101));
     }
 
     public boolean isPalindrome(int x) {

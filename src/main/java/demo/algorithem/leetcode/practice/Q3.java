@@ -9,9 +9,9 @@ import java.util.Set;
  * @author xierz
  * @date 2021/11/15
  */
-public class Q3LongestSubstringWithoutRepeatingCharacters {
+public class Q3 {
     public static void main(String[] args) {
-        System.out.println(new Q3LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring("abba"));
+        System.out.println(new Q3().lengthOfLongestSubstring("abba"));
     }
 
     public int lengthOfLongestSubstring(String s) {

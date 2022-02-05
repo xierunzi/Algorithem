@@ -7,7 +7,7 @@ import java.util.Map;
  * @author xierz
  * @date 2021/11/15
  */
-public class Q1TwoSum {
+public class Q1 {
     public static void main(String[] args) {
 
     }

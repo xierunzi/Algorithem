@@ -7,10 +7,10 @@ package demo.algorithem.leetcode.practice;
  * @author xierz
  * @date 2021/11/28
  */
-public class Q11IntToRoman {
+public class Q11 {
 
     public static void main(String[] args) {
-        System.out.println(new Q11IntToRoman().intToRoman(58));
+        System.out.println(new Q11().intToRoman(58));
     }
 
     public String intToRoman(int num) {

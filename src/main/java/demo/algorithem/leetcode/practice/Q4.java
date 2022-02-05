@@ -4,9 +4,9 @@ package demo.algorithem.leetcode.practice;
  * @author xierz
  * @date 2021/11/16
  */
-public class Q4MedianOfTwoSortedArrays {
+public class Q4 {
     public static void main(String[] args) {
-        System.out.println(new Q4MedianOfTwoSortedArrays().findMedianSortedArrays(new int[]{1, 3}, new int[]{2}));
+        System.out.println(new Q4().findMedianSortedArrays(new int[]{1, 3}, new int[]{2}));
     }
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
