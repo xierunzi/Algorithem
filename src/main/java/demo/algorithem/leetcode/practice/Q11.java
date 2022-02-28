@@ -1,8 +1,11 @@
 package demo.algorithem.leetcode.practice;
 
 /**
- * 暴力解
- * 题目意义不大
+ * 盛水最多的容器
+ * 双指针
+ * <p>
+ * 因为容器的体积为 两指针的距离*两指针中较小的那个指针的高度
+ * 所以双指针从两头开始向中间遍历，固定其中一个变量距离，然后选取较小的指针向中间移动一位
  *
  * @author xierz
  * @date 2021/11/28
@@ -10,95 +13,28 @@ package demo.algorithem.leetcode.practice;
 public class Q11 {
 
     public static void main(String[] args) {
-        System.out.println(new Q11().intToRoman(58));
+        int[] param = new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7};
+        System.out.println(new Q11().maxArea(param));
     }
 
-    public String intToRoman(int num) {
-        char[] nums = String.valueOf(num).toCharArray();
-        int[] standardNums = new int[4];
-
-        int delta = standardNums.length - nums.length;
-        for (int i = 0; i < 4; i++) {
-            if (i < delta) {
-                standardNums[i] = 0;
+    public int maxArea(int[] height) {
+        int len = height.length;
+        if (len == 2) {
+            return Math.min(height[0], height[1]);
+        }
+        int left = 0;
+        int right = len - 1;
+        int max = -1;
+        while (left < right) {
+            int leftVal = height[left];
+            int rightVal = height[right];
+            max = Math.max(max, Math.min(leftVal, rightVal) * (right - left));
+            if (leftVal < rightVal) {
+                left++;
             } else {
-                standardNums[i] = nums[i - delta] - '0';
+                right--;
             }
         }
-
-        StringBuilder builder = new StringBuilder();
-        int current;
-        if ((current = standardNums[0]) != 0) {
-            for (int i = 0; i < current; i++) {
-                builder.append("M");
-            }
-        }
-        if ((current = standardNums[1]) != 0) {
-            if (current == 5) {
-                builder.append("D");
-            } else if (current < 5) {
-                if (current == 4) {
-                    builder.append("CD");
-                } else {
-                    for (int i = 0; i < current; i++) {
-                        builder.append("C");
-                    }
-                }
-            } else {
-                if (current == 9) {
-                    builder.append("CM");
-                } else {
-                    builder.append("D");
-                    for (int i = 0; i < current - 5; i++) {
-                        builder.append("C");
-                    }
-                }
-            }
-        }
-        if ((current = standardNums[2]) > 0) {
-            if (current == 5) {
-                builder.append("L");
-            } else if (current < 5) {
-                if (current == 4) {
-                    builder.append("XL");
-                } else {
-                    for (int i = 0; i < current; i++) {
-                        builder.append("X");
-                    }
-                }
-            } else {
-                if (current == 9) {
-                    builder.append("XC");
-                } else {
-                    builder.append("L");
-                    for (int i = 0; i < current - 5; i++) {
-                        builder.append("X");
-                    }
-                }
-            }
-        }
-        if ((current = standardNums[3]) > 0) {
-            if (current == 5) {
-                builder.append("V");
-            } else if (current < 5) {
-                if (current == 4) {
-                    builder.append("IV");
-                } else {
-                    for (int i = 0; i < current; i++) {
-                        builder.append("I");
-                    }
-                }
-            } else {
-                if (current == 9) {
-                    builder.append("IX");
-                } else {
-                    builder.append("V");
-                    for (int i = 0; i < current - 5; i++) {
-                        builder.append("I");
-                    }
-                }
-            }
-        }
-        return builder.toString();
+        return max;
     }
 }

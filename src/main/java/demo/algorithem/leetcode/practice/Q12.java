@@ -1,10 +1,18 @@
 package demo.algorithem.leetcode.practice;
 
 /**
+ * 暴力解
+ * 题目意义不大
+ *
  * @author xierz
- * @date 2022/2/14
+ * @date 2021/11/28
  */
 public class Q12 {
+
+    public static void main(String[] args) {
+        System.out.println(new Q12().intToRoman(58));
+    }
+
     public String intToRoman(int num) {
         char[] nums = String.valueOf(num).toCharArray();
         int[] standardNums = new int[4];
