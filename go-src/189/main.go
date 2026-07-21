@@ -13,6 +13,7 @@ func rotate(nums []int, k int) {
 	if length == 1 {
 		return
 	}
+	k = k % length
 	rotated := make(map[int]struct{})
 	for i := 0; i < length; i++ {
 		if _, ok := rotated[i]; ok {
