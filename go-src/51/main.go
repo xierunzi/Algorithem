@@ -13,7 +13,9 @@ func solveNQueensV2(n int) [][]string {
 	// key row value col
 	board := make(map[int]int, n)
 	col := make([]bool, n)
+	// 同一条左上到右下的斜线，row-col 恒定，例如 (0,0)、(1,1)、(2,2) 的值都为 0。
 	leftDiag := make(map[int]bool, n)
+	// 同一条右上到左下的斜线，row+col 恒定，例如 (0,3)、(1,2)、(2,1) 的值都为 3。
 	rightDiag := make(map[int]bool, n)
 	var solve func(int)
 	solve = func(row int) {
@@ -22,6 +24,7 @@ func solveNQueensV2(n int) [][]string {
 			return
 		}
 		for i := 0; i < n; i++ {
+			// 用对角线的不变量作为索引，避免每次放置前再遍历两条斜线检查冲突。
 			leftDiagIndex := row - i
 			rightDiagIndex := row + i
 			if col[i] || leftDiag[leftDiagIndex] || rightDiag[rightDiagIndex] {
